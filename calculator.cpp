@@ -4,6 +4,8 @@ using namespace std;
 
 int add(int x, int y);
 int sub(int x, int y);
+int times(int x, int y);
+int divided(int x, int y);
 
 int main() {
     cout << "Enter your query?\n";
@@ -19,6 +21,12 @@ int main() {
     else if (ch == '-') {
         ans = sub(x, y);
     }
+    else if (ch == '*') {
+        ans = times(x, y);
+    }
+    else if (ch == '%') {
+        ans = divided(x, y);
+    }
 
     cout << ans << endl;
 
@@ -31,4 +39,12 @@ int add(int x, int y) {
 
 int sub(int x, int y) {
     return x - y;
+}
+
+int times(int x, int y) {
+    return x * y;
+}
+
+int divided(int x, int y) {
+    return x % y;
 }
